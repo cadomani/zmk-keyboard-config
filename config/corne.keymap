@@ -50,9 +50,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE        &none  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kt HOME        &kp BACKSLASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &none           &kp DELETE
-&kp LEFT_SHIFT    &none  &kt DOLLAR       &kt PERCENT   &kt CARET  &kp END         &kp SINGLE_QUOTE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none           &kp UP_ARROW    &none
-&kp LEFT_CONTROL  &none  &kt AMPERSAND    &kt ASTERISK  &kt GRAVE  &kt LEFT_GUI    &kp UNDER         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kt LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+&kp ESCAPE        &none  &kp EXCLAMATION  &kp AT_SIGN   &kp HASH   &kp HOME        &kp BACKSLASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none           &none           &kp DELETE
+&kp LEFT_SHIFT    &none  &kp DOLLAR       &kp PERCENT   &kp CARET  &kp END         &kp SINGLE_QUOTE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none           &kp UP_ARROW    &none
+&kp LEFT_CONTROL  &none  &kp AMPERSAND    &kp ASTERISK  &kp GRAVE  &kp LEFT_GUI    &kp UNDER         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
                                           &kp LEFT_ALT  &none      &kp ENTER       &kp SPACE         &none                 &kp RALT
             >;
         };
