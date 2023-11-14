@@ -9,6 +9,35 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        shiftUp: shiftUp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kt LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "SHIFTUP";
+        };
+        shiftDown: shiftDown {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kt LEFT_SHIFT &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT>;
+
+            label = "SHIFTDOWN";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -35,10 +64,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESCAPE      &none  &kp F1  &kp F2        &kp F3  &kp F10      &none      &kp KP_N7  &kp KP_N8  &kp KP_N9  &none       &kp DELETE
-&kp LEFT_SHIFT  &none  &kp F4  &kp F5        &kp F6  &kp F11      &none      &kp KP_N4  &kp KP_N5  &kp KP_N6  &none       &none
-&kp LCTRL       &none  &kp F7  &kp F8        &kp F9  &kp F12      &kp KP_N0  &kp KP_N1  &kp KP_N2  &kp KP_N3  &bt BT_PRV  &bt BT_NXT
-                               &kp LEFT_ALT  &none   &kp ENTER    &kp SPACE  &none      &kp RALT
+&kp ESCAPE      &kp F1  &kp F2   &kp F3        &kp F4   &none        &none       &kp KP_N7  &kp KP_N8  &kp KP_N9  &none       &kp DELETE
+&kp LEFT_SHIFT  &kp F5  &kp F6   &kp F7        &kp F8   &kp HOME     &shiftUp    &kp KP_N4  &kp KP_N5  &kp KP_N6  &none       &none
+&kp LCTRL       &kp F9  &kp F10  &kp F11       &kp F12  &kp END      &shiftDown  &kp KP_N1  &kp KP_N2  &kp KP_N3  &bt BT_PRV  &bt BT_NXT
+                                 &kp LEFT_ALT  &none    &kp ENTER    &kp SPACE   &none      &kp KP_N0
             >;
         };
 
